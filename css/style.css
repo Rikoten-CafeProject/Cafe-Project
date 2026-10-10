@@ -553,7 +553,7 @@ margin-left: 15px;
 box-shadow: 0 0 20px #7a6a58;
 }}
 @media(min-width:1001px)
-{.rikoten{width:300px;
+{.rikoten{width:350px;
 height:225px;
 float: left;
 margin-left: 30px;
@@ -581,7 +581,7 @@ float: right;
 margin-right: 15px;
 box-shadow: 0 0 20px #7a6a58;}}
 @media(min-width:1001px)
-{.kousiki{width:300px;
+{.kousiki{width:350px;
   height:225px;
 float: right;
 margin-right: 30px;
