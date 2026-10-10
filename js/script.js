@@ -1,17 +1,57 @@
-const swiper = new Swiper(".swiper", {// ページネーションが必要なら追加
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true
-  },slidesPerView: 1,
-  autoplay: {
-    delay: 5000,              // 5秒ごとに切り替え（1000 = 1秒）
-    disableOnInteraction: false, // ユーザーが操作しても自動再生を止めない
+const swiper = new Swiper('.coverflow-swiper', {
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  loop: true,
+  watchOverflow: false,
+  speed: 800,
+
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: false,
   },
-  // ナビボタンが必要なら追加
+
+  pagination: {
+    el: '.coverflow-swiper .swiper-pagination',
+    clickable: true,
+  },
+
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
-  },watchOverflow: false,
+    nextEl: '.coverflow-swiper .swiper-button-next',
+    prevEl: '.coverflow-swiper .swiper-button-prev',
+  },
+});
+const fadeSwiper = new Swiper('.fade-swiper', {
+  effect: 'fade',
+  slidesPerView: 1,
+  loop: true,
+  watchOverflow: false,
+  speed: 1200,
+
+  fadeEffect: {
+    crossFade: true,
+  },
+
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+
+  pagination: {
+    el: '.fade-swiper .swiper-pagination',
+    clickable: true,
+  },
+
+  navigation: {
+    nextEl: '.fade-swiper .swiper-button-next',
+    prevEl: '.fade-swiper .swiper-button-prev',
+  },
+});
+({watchOverflow: false,
 loop: true,
 grabCursor: true, 
 speed: 1200,
